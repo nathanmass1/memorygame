@@ -1,0 +1,194 @@
+html {
+	box-sizing: border-box;
+}
+
+footer {
+position: relative;
+display: flex;
+background-color: blue;
+align-items: center;
+justify-content: center;
+
+}
+
+
+.image {
+	width: 600px;
+	height: 250px;
+	background: #02b3e4
+}
+
+.special {
+	width: 600px;
+	height: 250px;
+	background: #eb3305
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+
+
+body {
+	background: #E6E6FA;
+	font-family: 'Arial', serif;
+	font-size: 16px;
+}
+
+.maincontainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1 {
+    font-family: 'Arial', serif;
+    font-weight: bold;
+    color: rgba(255, 0, 200, 0.87);
+}
+
+
+.submitbutton {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.submitbutton:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.submitbutton:active {
+    transform: scale(0.99);
+}
+
+.deck {
+	width: 100%;
+	background-image: url("https://antongorlin.com/wp-content/gallery/desert-landscape/desert-landscape-vertical.jpg");
+	padding: 3rem;
+	border-radius: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 0 3em;
+}
+
+.deck .card {
+	height: 25px;
+	width: 10px;
+	margin: 0.5rem 0.5rem;
+	background: #79d1fa;;
+	font-size: 0;
+	color: #ffffff;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 5px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+	
+	background: #62bcd4;
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+}
+
+.deck .card.show {
+	font-size: 50px;
+}
+
+.deck .card.match {
+	cursor: default;
+	background: rgb(136, 255, 132);
+	font-size: 50px;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+}
+
+.deck .card.unmatched {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	background: #e2043b;
+}
+
+.deck .card.disabled {
+	pointer-events: none;
+	opacity: 0.9;
+}
+
+
+.scoreboard {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 100 !important;
+}
+
+
+
+
+
+/* media queries for varying screen sizes */
+
+@media (min-width: 768px) {
+	.maincontainer {
+		font-size: 24px;
+	}
+
+	.deck {
+		width: 660px;
+		height: 680px;
+	}
+
+	.deck .card {
+		height: 130px;
+		width: 120px;
+	}
+
+}
+
+@media (max-width: 480px) {
+	.maincontainer {
+		font-size: 12px;
+	}
+
+	.deck {
+		width: 440px;
+		height: 440px;
+	}
+
+	.deck .card {
+		height: 60px;
+		width: 40px;
+	}
+
+}
